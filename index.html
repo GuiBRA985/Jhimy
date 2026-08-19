@@ -1,149 +1,213 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guia do Pantanal | Experiências autênticas</title>
-<meta name="description" content="Experiências no Pantanal com guia local e atendimento em vários idiomas.">
+<title>Pantanal Tour Express | Ecoturismo no Pantanal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
-:root{
-  --green:#122019; --green2:#1d3025; --gold:#d6bb78; --cream:#f5f0e5;
-  --muted:#c8c9bd; --line:#314238;
+body {
+margin:0;
+font-family:Montserrat, sans-serif;
+background:#0b1f14;
+color:white;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--green);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit}
-.hero{
-  min-height:92vh;display:flex;align-items:flex-end;padding:42px 7%;
-  position:relative;overflow:hidden;
-  background:
-   linear-gradient(0deg,rgba(4,10,7,.9),rgba(4,10,7,.08) 65%,rgba(4,10,7,.35)),
-   url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2200&q=85") center/cover;
+
+/* HERO */
+.hero {
+background:url('banner.jpg') center/cover;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+position:relative;
 }
-nav{position:absolute;top:0;left:0;right:0;padding:24px 7%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#07100be0,transparent)}
-.brand{font:600 22px Georgia,serif;letter-spacing:.5px}
-.lang{font-size:13px;letter-spacing:1px}
-.hero-content{max-width:850px}
-.eyebrow{display:inline-block;border:1px solid #e3cd91;border-radius:30px;padding:9px 15px;color:#ead49b;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
-h1{font:400 clamp(48px,8vw,105px)/.88 Georgia,serif;margin:0 0 25px}
-.hero p{font-size:19px;line-height:1.65;max-width:690px;color:#eee9dc}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;text-decoration:none;padding:14px 21px;border-radius:30px;border:1px solid #e5d39d}
-.btn.primary{background:var(--gold);color:#101810;border-color:var(--gold)}
-section{max-width:1250px;margin:auto;padding:90px 7%}
-h2{font:400 clamp(36px,5vw,65px)/1 Georgia,serif;margin:0 0 18px}
-.lead{max-width:780px;color:var(--muted);font-size:18px;line-height:1.8}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
-.card{background:var(--green2);border:1px solid var(--line);padding:30px;border-radius:16px}
-.icon{font-size:30px}.card h3{font:400 25px Georgia,serif}.card p{color:var(--muted);line-height:1.65}
-.languages{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
-.languages span{border:1px solid var(--line);padding:9px 13px;border-radius:30px;color:#ddd9cb}
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:240px;gap:10px;margin-top:38px}
-.gallery img{width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;transition:.25s}
-.gallery img:hover{transform:scale(1.015);filter:brightness(1.1)}
-.gallery .big{grid-row:span 2}
-.quote{padding:95px 7%;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.quote p{max-width:900px;margin:auto;font:400 clamp(28px,4vw,52px)/1.25 Georgia,serif;color:#e8dfcb}
-.cta{background:var(--gold);color:#101810;border-radius:20px;padding:48px;text-align:center}
-.cta h2{margin-bottom:10px}.cta p{font-size:18px;line-height:1.6}
-.cta .btn{background:#101810;color:#fff;border-color:#101810}
-footer{text-align:center;padding:35px 7%;color:#879188;font-size:13px;border-top:1px solid var(--line)}
-@media(max-width:800px){
- .cards{grid-template-columns:1fr}
- .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
- .gallery .big{grid-row:span 2}
- nav{padding:20px}
+
+.overlay {
+position:absolute;
+top:0;left:0;right:0;bottom:0;
+background:rgba(0,0,0,0.5);
+}
+
+.hero-content {
+position:relative;
+z-index:2;
+}
+
+h1 {
+font-size:48px;
+margin:0;
+}
+
+p {
+font-size:18px;
+}
+
+.btn {
+display:inline-block;
+padding:14px 22px;
+margin:10px;
+background:#f4c542;
+color:black;
+font-weight:700;
+border-radius:8px;
+text-decoration:none;
+}
+
+/* SECTIONS */
+section {
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2 {
+text-align:center;
+margin-bottom:30px;
+}
+
+/* CARDS */
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card {
+background:#123524;
+padding:20px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover {
+transform:scale(1.03);
+}
+
+/* GALERIA */
+.gallery img {
+width:100%;
+border-radius:10px;
+}
+
+/* WHATSAPP FIXO */
+.whatsapp {
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FOOTER */
+footer {
+background:black;
+text-align:center;
+padding:20px;
+font-size:14px;
 }
 </style>
 </head>
+
 <body>
 
-<header class="hero">
-<nav>
-  <div class="brand">PANTANAL • GUIA LOCAL</div>
-  <div class="lang">🇧🇷 PT &nbsp; 🇬🇧 EN &nbsp; 🇪🇸 ES &nbsp; 🌎</div>
-</nav>
+<!-- HERO -->
+<div class="hero">
+<div class="overlay"></div>
+
 <div class="hero-content">
-  <div class="eyebrow">Experiências autênticas no Pantanal</div>
-  <h1>O Pantanal,<br>de perto.</h1>
-  <p>
-    Conheça a vida selvagem, os rios, as paisagens e a cultura pantaneira
-    acompanhado por um guia local que fala vários idiomas.
-  </p>
-  <div class="buttons">
-    <a class="btn primary" href="https://www.facebook.com/share/17KvZ3tfFo/" target="_blank">Conheça o guia</a>
-    <a class="btn" href="#galeria">Ver galeria</a>
-  </div>
+<img src="logo.png" width="140">
+<h1>Pantanal Tour Express</h1>
+<p>Explore o Pantanal com segurança, conforto e experiências inesquecíveis</p>
+
+<a class="btn" href="https://wa.me/5565998105952">Reservar Agora</a>
+<a class="btn" href="#passeios">Ver Passeios</a>
 </div>
-</header>
-
-<section>
-  <h2>Uma experiência que você leva para casa.</h2>
-  <p class="lead">
-    Safáris, observação de animais, passeios de barco, aves, pôr do sol e
-    encontros com a natureza. A proposta é simples: conhecer o Pantanal
-    com quem vive e conhece a região.
-  </p>
-
-  <div class="cards">
-    <article class="card">
-      <div class="icon">🐆</div>
-      <h3>Vida selvagem</h3>
-      <p>Busca e observação responsável da fauna pantaneira, sempre respeitando os animais e seu ambiente.</p>
-    </article>
-    <article class="card">
-      <div class="icon">🛶</div>
-      <h3>Rios & safáris</h3>
-      <p>Exploração de rios, corixos e paisagens do Pantanal em experiências pensadas para cada visitante.</p>
-    </article>
-    <article class="card">
-      <div class="icon">🌅</div>
-      <h3>Pantanal de verdade</h3>
-      <p>Nascer e pôr do sol, aves, paisagens e cultura local — longe de uma experiência turística genérica.</p>
-    </article>
-  </div>
-</section>
-
-<section>
-  <h2>Seu idioma não é uma barreira.</h2>
-  <p class="lead">O atendimento pode ser apresentado no idioma do visitante, tornando a experiência mais natural desde o primeiro contato.</p>
-  <div class="languages">
-    <span>🇧🇷 Português</span>
-    <span>🇬🇧 English</span>
-    <span>🇪🇸 Español</span>
-    <span>🇫🇷 Français</span>
-    <span>🌎 Outros idiomas</span>
-  </div>
-</section>
-
-<section id="galeria">
-  <h2>Galeria do Pantanal</h2>
-  <p class="lead">Estas são imagens provisórias para a demonstração. Quando o guia enviar a nuvem das fotografias, substituímos tudo pelas imagens reais das expedições.</p>
-  <div class="gallery">
-    <img class="big" src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85" alt="Paisagem natural">
-    <img src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=900&q=85" alt="Rio e natureza">
-    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=85" alt="Floresta">
-    <img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=900&q=85" alt="Natureza">
-    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=900&q=85" alt="Paisagem">
-    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85" alt="Paisagem natural">
-  </div>
-</section>
-
-<div class="quote">
-  <p>“O Pantanal não é apenas um lugar para visitar. É um lugar para sentir.”</p>
 </div>
 
+<!-- SOBRE -->
 <section>
-  <div class="cta">
-    <h2>Vamos conhecer o Pantanal?</h2>
-    <p>Fale diretamente com o guia e descubra as possibilidades para sua próxima experiência.</p>
-    <a class="btn" href="https://www.facebook.com/share/17KvZ3tfFo/" target="_blank">Ver perfil no Facebook</a>
-  </div>
+<h2>Sobre Nós</h2>
+<p style="text-align:center; max-width:800px; margin:auto;">
+Somos especialistas em ecoturismo no Pantanal, oferecendo experiências autênticas com fauna selvagem, rios e natureza preservada.
+</p>
+</section>
+
+<!-- PASSEIOS -->
+<section id="passeios">
+<h2>Passeios em Destaque</h2>
+
+<div class="grid">
+<div class="card">🐆 Safári de Onça-Pintada</div>
+<div class="card">🚤 Passeio de Barco</div>
+<div class="card">🦜 Observação de Aves</div>
+<div class="card">🏞️ Chapada dos Guimarães</div>
+<div class="card">💧 Nobres e Bom Jardim</div>
+<div class="card">🐎 Cavalgada Pantaneira</div>
+</div>
+</section>
+
+<!-- GALERIA -->
+<section>
+<h2>Galeria</h2>
+
+<div class="grid gallery">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+</div>
+
+<p style="text-align:center;opacity:0.7">
+(Substitua pelas suas fotos reais)
+</p>
+</section>
+
+<!-- RESERVA -->
+<section>
+<h2>Reserve sua Experiência</h2>
+
+<div class="card">
+<form>
+<input type="text" placeholder="Nome" style="width:100%;padding:10px;margin:5px 0">
+<input type="text" placeholder="WhatsApp" style="width:100%;padding:10px;margin:5px 0">
+<input type="date" style="width:100%;padding:10px;margin:5px 0">
+<input type="number" placeholder="Número de pessoas" style="width:100%;padding:10px;margin:5px 0">
+<textarea placeholder="Passeio desejado" style="width:100%;padding:10px;margin:5px 0"></textarea>
+
+<button type="button" onclick="alert('Pedido enviado! Entre em contato no WhatsApp')"
+style="padding:12px;background:#f4c542;border:none;font-weight:bold;width:100%">
+Enviar Pedido
+</button>
+</form>
+</div>
+</section>
+
+<!-- CONTATO -->
+<section>
+<h2>Contato</h2>
+
+<div class="card">
+📍 Rua Vila Nova, 742 - CEP 78055-856<br>
+📞 WhatsApp: 65 99810-5952<br>
+📧 jhimo2017@icloud.com
+</div>
 </section>
 
 <footer>
-  © 2026 • Guia do Pantanal • Página demonstrativa
+© 2026 Pantanal Tour Express - Todos os direitos reservados
 </footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/5565998105952">WhatsApp</a>
+
 </body>
 </html>
