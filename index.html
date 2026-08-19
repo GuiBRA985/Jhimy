@@ -1,213 +1,995 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pantanal Tour Express | Ecoturismo no Pantanal</title>
+
+<title>Jhimy | Guia no Pantanal</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
+
+* {
+box-sizing:border-box;
+}
+
+html {
+scroll-behavior:smooth;
+}
+
 body {
 margin:0;
-font-family:Montserrat, sans-serif;
+font-family:Montserrat,sans-serif;
 background:#0b1f14;
 color:white;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero {
-background:url('banner.jpg') center/cover;
+
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+url('foto1.jpg') center/cover;
+
 height:100vh;
+
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-text-align:center;
-padding:20px;
-position:relative;
-}
 
-.overlay {
-position:absolute;
-top:0;left:0;right:0;bottom:0;
-background:rgba(0,0,0,0.5);
+text-align:center;
+
+padding:20px;
+
+position:relative;
+
 }
 
 .hero-content {
+
 position:relative;
+
 z-index:2;
+
+max-width:900px;
+
 }
+
+/* LOGO */
+
+.hero-logo {
+
+width:180px;
+
+max-width:60vw;
+
+margin-bottom:25px;
+
+}
+
+/* TITULO */
 
 h1 {
-font-size:48px;
-margin:0;
+
+font-size:52px;
+
+margin:10px 0;
+
+font-weight:800;
+
 }
 
-p {
-font-size:18px;
+.hero p {
+
+font-size:20px;
+
+max-width:700px;
+
+margin:15px auto 25px;
+
+line-height:1.6;
+
 }
+
+/* BOTÕES */
 
 .btn {
+
 display:inline-block;
-padding:14px 22px;
-margin:10px;
+
+padding:14px 24px;
+
+margin:8px;
+
 background:#f4c542;
+
 color:black;
+
 font-weight:700;
+
 border-radius:8px;
+
 text-decoration:none;
+
+transition:.3s;
+
 }
 
-/* SECTIONS */
+.btn:hover {
+
+transform:translateY(-3px);
+
+background:#ffd85e;
+
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
 section {
-padding:60px 20px;
+
+padding:70px 20px;
+
 max-width:1100px;
+
 margin:auto;
+
 }
 
 h2 {
+
 text-align:center;
-margin-bottom:30px;
+
+font-size:32px;
+
+margin-bottom:35px;
+
 }
 
-/* CARDS */
-.grid {
+.section-text {
+
+max-width:800px;
+
+margin:auto;
+
+text-align:center;
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+/* =========================
+   SOBRE O GUIA
+========================= */
+
+.guide {
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+align-items:center;
+
+}
+
+.guide-photo {
+
+width:100%;
+
+height:420px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+background:#123524;
+
+}
+
+.guide-text h2 {
+
+text-align:left;
+
+margin-top:0;
+
+}
+
+.guide-text p {
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+/* =========================
+   IDIOMAS
+========================= */
+
+.languages {
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+margin-top:25px;
+
+}
+
+.language {
+
+background:#123524;
+
+padding:12px 18px;
+
+border-radius:30px;
+
+font-weight:600;
+
+}
+
+/* =========================
+   PASSEIOS
+========================= */
+
+.grid {
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
+
 gap:20px;
+
 }
 
 .card {
+
 background:#123524;
-padding:20px;
+
+padding:25px;
+
 border-radius:12px;
-transition:0.3s;
+
+transition:.3s;
+
 }
 
 .card:hover {
-transform:scale(1.03);
+
+transform:translateY(-5px);
+
+background:#16452f;
+
 }
 
-/* GALERIA */
+.card h3 {
+
+margin-top:10px;
+
+}
+
+.card p {
+
+color:#ccc;
+
+line-height:1.6;
+
+}
+
+/* =========================
+   GALERIA
+========================= */
+
+.gallery {
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:15px;
+
+}
+
 .gallery img {
+
 width:100%;
-border-radius:10px;
+
+height:230px;
+
+object-fit:cover;
+
+border-radius:12px;
+
 }
 
-/* WHATSAPP FIXO */
-.whatsapp {
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-}
+/* =========================
+   ÁLBUM
+========================= */
 
-/* FOOTER */
-footer {
-background:black;
+.album {
+
 text-align:center;
-padding:20px;
-font-size:14px;
+
+background:#123524;
+
+padding:40px 25px;
+
+border-radius:15px;
+
 }
+
+.album p {
+
+color:#ddd;
+
+line-height:1.7;
+
+}
+
+/* =========================
+   RESERVA
+========================= */
+
+form {
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+input,
+textarea {
+
+width:100%;
+
+padding:13px;
+
+margin:6px 0;
+
+border:none;
+
+border-radius:6px;
+
+font-family:inherit;
+
+}
+
+textarea {
+
+min-height:120px;
+
+resize:vertical;
+
+}
+
+button {
+
+padding:14px;
+
+background:#f4c542;
+
+border:none;
+
+font-weight:bold;
+
+width:100%;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+button:hover {
+
+background:#ffd85e;
+
+}
+
+/* =========================
+   CONTATO
+========================= */
+
+.contact {
+
+background:#123524;
+
+padding:30px;
+
+border-radius:12px;
+
+text-align:center;
+
+line-height:2;
+
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:#25D366;
+
+color:white;
+
+padding:15px 20px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+z-index:10;
+
+box-shadow:0 4px 15px #0008;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+background:#050805;
+
+text-align:center;
+
+padding:25px;
+
+font-size:14px;
+
+color:#aaa;
+
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:800px) {
+
+h1 {
+
+font-size:38px;
+
+}
+
+.hero {
+
+height:90vh;
+
+}
+
+.guide {
+
+grid-template-columns:1fr;
+
+}
+
+.guide-text h2 {
+
+text-align:center;
+
+}
+
+.guide-photo {
+
+height:350px;
+
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO -->
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
 <div class="hero">
-<div class="overlay"></div>
 
 <div class="hero-content">
-<img src="logo.png" width="140">
-<h1>Pantanal Tour Express</h1>
-<p>Explore o Pantanal com segurança, conforto e experiências inesquecíveis</p>
 
-<a class="btn" href="https://wa.me/5565998105952">Reservar Agora</a>
-<a class="btn" href="#passeios">Ver Passeios</a>
-</div>
-</div>
+<!-- FOTO2 = LOGO -->
 
-<!-- SOBRE -->
-<section>
-<h2>Sobre Nós</h2>
-<p style="text-align:center; max-width:800px; margin:auto;">
-Somos especialistas em ecoturismo no Pantanal, oferecendo experiências autênticas com fauna selvagem, rios e natureza preservada.
+<img
+src="foto2.jpg"
+alt="Logo"
+class="hero-logo"
+>
+
+<h1>Jhimy</h1>
+
+<p>
+
+Guia no Pantanal • Natureza • Vida Selvagem • Experiências autênticas
+
 </p>
+
+<a
+class="btn"
+href="https://wa.me/5565998105952"
+target="_blank"
+>
+
+Reservar Experiência
+
+</a>
+
+<a
+class="btn"
+href="#passeios"
+>
+
+Conhecer o Pantanal
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+     SOBRE
+================================================== -->
+
+<section>
+
+<div class="guide">
+
+<!-- FOTO3 = FOTO DO GUIA -->
+
+<div>
+
+<img
+src="foto3.jpg"
+alt="Jhimy - Guia do Pantanal"
+class="guide-photo"
+>
+
+</div>
+
+
+<div class="guide-text">
+
+<h2>Conheça Jhimy</h2>
+
+<p>
+
+Conheça o Pantanal acompanhado por quem conhece
+a região e vive de perto a sua natureza.
+
+</p>
+
+<p>
+
+A experiência vai muito além de simplesmente
+visitar um lugar. É observar os animais,
+navegar pelos rios, conhecer as paisagens
+e descobrir a verdadeira vida pantaneira.
+
+</p>
+
+<p>
+
+<strong>
+Atendimento para visitantes brasileiros
+e estrangeiros.
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- PASSEIOS -->
+
+<!-- ==================================================
+     IDIOMAS
+================================================== -->
+
+<section>
+
+<h2>Falamos a sua língua</h2>
+
+<p class="section-text">
+
+O Pantanal recebe visitantes de todo o mundo.
+O atendimento em diferentes idiomas torna
+a experiência ainda mais confortável e pessoal.
+
+</p>
+
+<div class="languages">
+
+<div class="language">🇧🇷 Português</div>
+
+<div class="language">🇬🇧 English</div>
+
+<div class="language">🇪🇸 Español</div>
+
+<div class="language">🌎 Outros idiomas</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     PASSEIOS
+================================================== -->
+
 <section id="passeios">
-<h2>Passeios em Destaque</h2>
+
+<h2>Experiências no Pantanal</h2>
 
 <div class="grid">
-<div class="card">🐆 Safári de Onça-Pintada</div>
-<div class="card">🚤 Passeio de Barco</div>
-<div class="card">🦜 Observação de Aves</div>
-<div class="card">🏞️ Chapada dos Guimarães</div>
-<div class="card">💧 Nobres e Bom Jardim</div>
-<div class="card">🐎 Cavalgada Pantaneira</div>
+
+
+<div class="card">
+
+<h3>🐆 Safári de Onça-Pintada</h3>
+
+<p>
+
+Observe uma das maiores atrações
+da vida selvagem do Pantanal.
+
+</p>
+
 </div>
+
+
+<div class="card">
+
+<h3>🚤 Passeio de Barco</h3>
+
+<p>
+
+Explore rios, corixos e paisagens
+pantaneiras em uma experiência única.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🦜 Observação de Aves</h3>
+
+<p>
+
+Descubra a enorme diversidade
+de aves do Pantanal.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🐎 Cavalgada Pantaneira</h3>
+
+<p>
+
+Conheça o Pantanal de uma maneira
+tradicional e autêntica.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌅 Nascer e Pôr do Sol</h3>
+
+<p>
+
+Momentos únicos para contemplar
+uma das paisagens mais bonitas do Brasil.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🐊 Vida Selvagem</h3>
+
+<p>
+
+Uma oportunidade para observar
+a fauna pantaneira em seu ambiente natural.
+
+</p>
+
+</div>
+
+
+</div>
+
 </section>
 
-<!-- GALERIA -->
-<section>
+
+<!-- ==================================================
+     GALERIA
+================================================== -->
+
+<section id="galeria">
+
 <h2>Galeria</h2>
 
-<div class="grid gallery">
-<img src="foto1.jpg">
-<img src="foto2.jpg">
-<img src="foto3.jpg">
+<p class="section-text">
+
+Alguns momentos registrados no Pantanal.
+Nossa galeria completa está sendo preparada.
+
+</p>
+
+
+<div class="gallery">
+
+<img
+src="foto1.jpg"
+alt="Pantanal"
+>
+
+<img
+src="foto3.jpg"
+alt="Jhimy no Pantanal"
+>
+
 </div>
 
-<p style="text-align:center;opacity:0.7">
-(Substitua pelas suas fotos reais)
-</p>
 </section>
 
-<!-- RESERVA -->
+
+<!-- ==================================================
+     ÁLBUM GOOGLE DRIVE
+================================================== -->
+
 <section>
+
+<div class="album">
+
+<h2>📸 Álbum de Fotos</h2>
+
+<p>
+
+Veja a galeria completa de fotografias
+das experiências e paisagens do Pantanal.
+
+</p>
+
+<a
+class="btn"
+href="https://drive.google.com/drive/folders/1EmAOLkS3Q_FcJeQ1dyOF_0KSRiD-JWiF"
+target="_blank"
+>
+
+Abrir Álbum Completo
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     RESERVA
+================================================== -->
+
+<section>
+
 <h2>Reserve sua Experiência</h2>
 
 <div class="card">
-<form>
-<input type="text" placeholder="Nome" style="width:100%;padding:10px;margin:5px 0">
-<input type="text" placeholder="WhatsApp" style="width:100%;padding:10px;margin:5px 0">
-<input type="date" style="width:100%;padding:10px;margin:5px 0">
-<input type="number" placeholder="Número de pessoas" style="width:100%;padding:10px;margin:5px 0">
-<textarea placeholder="Passeio desejado" style="width:100%;padding:10px;margin:5px 0"></textarea>
 
-<button type="button" onclick="alert('Pedido enviado! Entre em contato no WhatsApp')"
-style="padding:12px;background:#f4c542;border:none;font-weight:bold;width:100%">
-Enviar Pedido
+<form
+onsubmit="enviarWhatsApp(); return false;"
+>
+
+<input
+type="text"
+id="nome"
+placeholder="Seu nome"
+required
+>
+
+<input
+type="text"
+id="whatsapp"
+placeholder="Seu WhatsApp"
+required
+>
+
+<input
+type="date"
+id="data"
+required
+>
+
+<input
+type="number"
+id="pessoas"
+placeholder="Número de pessoas"
+min="1"
+required
+>
+
+<textarea
+id="passeio"
+placeholder="Qual experiência você deseja?"
+required
+></textarea>
+
+<button type="submit">
+
+Enviar pelo WhatsApp
+
 </button>
+
 </form>
+
 </div>
+
 </section>
 
-<!-- CONTATO -->
+
+<!-- ==================================================
+     CONTATO
+================================================== -->
+
 <section>
+
 <h2>Contato</h2>
 
-<div class="card">
-📍 Rua Vila Nova, 742 - CEP 78055-856<br>
-📞 WhatsApp: 65 99810-5952<br>
+<div class="contact">
+
+📍 Rua Vila Nova, 742 - CEP 78055-856
+
+<br>
+
+📞 WhatsApp:
+65 99810-5952
+
+<br>
+
 📧 jhimo2017@icloud.com
+
 </div>
+
 </section>
 
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
 <footer>
-© 2026 Pantanal Tour Express - Todos os direitos reservados
+
+© 2026 Jhimy • Guia do Pantanal
+
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/5565998105952">WhatsApp</a>
+
+<!-- ==================================================
+     WHATSAPP
+================================================== -->
+
+<a
+class="whatsapp"
+href="https://wa.me/5565998105952"
+target="_blank"
+>
+
+WhatsApp
+
+</a>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+function enviarWhatsApp() {
+
+const nome =
+document.getElementById("nome").value;
+
+const telefone =
+document.getElementById("whatsapp").value;
+
+const data =
+document.getElementById("data").value;
+
+const pessoas =
+document.getElementById("pessoas").value;
+
+const passeio =
+document.getElementById("passeio").value;
+
+
+const mensagem =
+
+`Olá Jhimy!
+
+Gostaria de reservar uma experiência no Pantanal.
+
+Nome: ${nome}
+
+WhatsApp: ${telefone}
+
+Data: ${data}
+
+Número de pessoas: ${pessoas}
+
+Experiência desejada:
+${passeio}`;
+
+
+const url =
+
+"https://wa.me/5565998105952?text="
++
+encodeURIComponent(mensagem);
+
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
 
 </body>
+
 </html>
