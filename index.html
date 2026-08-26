@@ -13,29 +13,33 @@
 html { scroll-behavior:smooth; }
 body { margin:0; font-family:Montserrat,sans-serif; background:#0b1f14; color:white; }
 
-/* HEADER / LOGO */
+/* HEADER / LOGO - redesigned to keep logo fully visible and align buttons */
 .top-header {
   width:100%;
-  height:220px; /* header height - logo will cover */
-  position:relative;
-  overflow:hidden;
-}
-.top-header img.header-logo {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-/* NAV */
-.site-nav {
-  position:absolute;
-  top:12px;
-  left:18px;
-  right:18px;
+  padding:12px 18px;
+  box-sizing:border-box;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:16px;
+  position:relative;
+  background:transparent;
+}
+/* Ensure the logo image is shown completely and keeps its aspect ratio */
+.top-header .header-logo {
+  height:88px; /* adjust this value if you want a larger/smaller logo */
+  max-height:18vh;
+  width:auto;
+  display:block;
+  object-fit:contain;
+}
+
+/* NAV - now part of the header layout and aligned with flexbox */
+.site-nav {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:12px;
   z-index:4;
 }
 .nav-left { display:flex; align-items:center; gap:12px; }
@@ -44,7 +48,7 @@ body { margin:0; font-family:Montserrat,sans-serif; background:#0b1f14; color:wh
 .nav-menu a { color:white; text-decoration:none; background:#123524; padding:8px 12px; border-radius:8px; font-weight:700; }
 .nav-menu a:hover { background:#16452f; }
 .contact-dropdown { position:relative; }
-.contact-dropdown .dropdown { display:none; position:absolute; right:0; top:40px; background:#123524; border-radius:8px; padding:10px; min-width:180px; }
+.contact-dropdown .dropdown { display:none; position:absolute; right:0; top:44px; background:#123524; border-radius:8px; padding:10px; min-width:180px; }
 .contact-dropdown:hover .dropdown { display:block; }
 .dropdown a { display:block; color:white; text-decoration:none; padding:8px 6px; }
 .dropdown a:hover { background:#16452f; border-radius:6px; }
@@ -119,22 +123,26 @@ button:hover { background:#ffd85e; }
 .contact { background:#123524; padding:30px; border-radius:12px; text-align:center; line-height:2; }
 
 /* WHATSAPP FLOAT */
-.whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 20px; border-radius:50px; text-decoration:none; font-weight:bold; z-index:10; box-shadow:0 4px 15px #0008; }
+.whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 20px; border-radius:50px; text-decoration:none; font-weight:bold; z-index:10; box-shadow:0 4px 10px rgba(0,0,0,0.3); }
 
 /* FOOTER */
 footer { background:#050805; text-align:center; padding:25px; font-size:14px; color:#aaa; }
 
 /* RESPONSIVE */
+@media(max-width:1000px) {
+  .top-header .header-logo { height:72px; }
+}
 @media(max-width:800px) {
   h1 { font-size:38px; }
   .hero { height:50vh; }
   .guide { grid-template-columns:1fr; }
   .guide-text h2 { text-align:center; }
   .guide-photo { height:350px; }
-  .site-nav { top:8px; left:8px; right:8px; }
   .nav-menu { display:none; }
   .mobile-menu-btn { display:block; background:#123524; padding:8px 10px; border-radius:8px; }
   .hero-content { padding-top:10px; }
+  .top-header { padding:10px; gap:10px; }
+  .top-header .header-logo { height:64px; max-width:60%; }
 }
 
 </style>
@@ -453,7 +461,7 @@ function enviarWhatsApp() {
   const data = document.getElementById("data").value;
   const pessoas = document.getElementById("pessoas").value;
   const passeio = document.getElementById("passeio").value;
-  const mensagem = `Olá Jhimy!\n\nGostaria de reservar uma experiência no Pantanal.\n\nNome: ${nome}\n\nWhatsApp: ${telefone}\n\nData: ${data}\n\nNúmero de pessoas: ${pessoas}\n\nExperiência desejada:\n${passeio}`;
+  const mensagem = `Olá Jhimy!\n\nGostaria de reservar uma experiência no Pantanal.\n\nNome: ${nome}\n\nWhatsApp: ${telefone}\n\nData: ${data}\n\nNúmero de pessoas: ${pessoas}\n\nExperiência: ${passeio}`;
   const url = "https://wa.me/5565998105952?text=" + encodeURIComponent(mensagem);
   window.open(url,"_blank");
 }
