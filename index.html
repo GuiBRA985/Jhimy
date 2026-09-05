@@ -307,6 +307,7 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
     </div>
     <div class="nav-right">
       <ul class="nav-menu">
+        <li><a href="sobre.html" data-key="menu_about">About Us</a></li>
         <li><a href="#passeios" data-key="menu_experiences">Experiences</a></li>
         <li><a href="#galeria" data-key="menu_gallery">Gallery</a></li>
         <li><a href="#album" id="menu-album" data-key="menu_album">Album</a></li>
@@ -351,6 +352,7 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
       <p id="about-p1">Discover the Pantanal accompanied by someone who knows the region and lives its nature closely.</p>
       <p id="about-p2">The experience goes far beyond simply visiting a place. It's observing the animals, navigating the rivers, getting to know the landscapes, and discovering true Pantanal life.</p>
       <p id="about-p3"><strong>Service for Brazilian and international visitors.</strong></p>
+      <a class="btn" id="about-link" href="sobre.html">Read our story</a>
     </div>
   </div>
 </section>
@@ -461,6 +463,7 @@ const translations = {
     aboutTitle: 'Meet Jhimy',
     aboutP1: 'Discover the Pantanal accompanied by someone who knows the region and lives its nature closely.',
     aboutP2: "The experience goes far beyond simply visiting a place. It's observing the animals, navigating the rivers, getting to know the landscapes, and discovering true Pantanal life.",
+    aboutBtn: 'Read our story',
     langsTitle: 'We speak your language',
     langsP: 'The Pantanal welcomes visitors from all over the world. Assistance in different languages makes the experience more comfortable and personal.',
     expTitle: 'Experiences in the Pantanal',
@@ -469,6 +472,7 @@ const translations = {
     albumBtn: 'Open Complete Album',
     reserveTitle: 'Reserve your Experience',
     contactTitle: 'Contact',
+    menu_about: 'About Us',
     menu_experiences: 'Experiences',
     menu_gallery: 'Gallery',
     menu_album: 'Album',
@@ -483,6 +487,7 @@ const translations = {
     aboutTitle: 'Conheça Jhimy',
     aboutP1: 'Conheça o Pantanal acompanhado por quem conhece a região e vive de perto a sua natureza.',
     aboutP2: 'A experiência vai muito além de simplesmente visitar um lugar. É observar os animais, navegar pelos rios, conhecer as paisagens e descobrir a verdadeira vida pantaneira.',
+    aboutBtn: 'Conheça nossa história',
     langsTitle: 'Falamos a sua língua',
     langsP: 'O Pantanal recebe visitantes de todo o mundo. O atendimento em diferentes idiomas torna a experiência ainda mais confortável e pessoal.',
     expTitle: 'Experiências no Pantanal',
@@ -491,6 +496,7 @@ const translations = {
     albumBtn: 'Abrir Álbum Completo',
     reserveTitle: 'Reserve sua Experiência',
     contactTitle: 'Contato',
+    menu_about: 'Sobre Nós',
     menu_experiences: 'Passeios',
     menu_gallery: 'Galeria',
     menu_album: 'Álbum',
@@ -505,6 +511,7 @@ const translations = {
     aboutTitle: 'Conoce a Jhimy',
     aboutP1: 'Descubre el Pantanal acompañado por alguien que conoce la región y vive de cerca su naturaleza.',
     aboutP2: 'La experiencia va mucho más allá de simplemente visitar un lugar. Es observar los animales, navegar por los ríos, conocer los paisajes y descubrir la verdadera vida pantanosa.',
+    aboutBtn: 'Conoce nuestra historia',
     langsTitle: 'Hablamos tu idioma',
     langsP: 'El Pantanal recibe visitantes de todo el mundo. La atención en diferentes idiomas hace que la experiencia sea más cómoda y personal.',
     expTitle: 'Experiencias en el Pantanal',
@@ -513,6 +520,7 @@ const translations = {
     albumBtn: 'Abrir Álbum Completo',
     reserveTitle: 'Reserva tu Experiencia',
     contactTitle: 'Contacto',
+    menu_about: 'Sobre nosotros',
     menu_experiences: 'Experiencias',
     menu_gallery: 'Galería',
     menu_album: 'Álbum',
@@ -527,6 +535,7 @@ const translations = {
     aboutTitle: 'Rencontrez Jhimy',
     aboutP1: "Découvrez le Pantanal accompagné de quelqu'un qui connaît la région et vit sa nature au quotidien.",
     aboutP2: "L'expérience va bien au-delà de la simple visite d'un lieu. C'est observer les animaux, naviguer sur les rivières, connaître les paysages et découvrir la vraie vie du Pantanal.",
+    aboutBtn: 'Découvrez notre histoire',
     langsTitle: "Nous parlons votre langue",
     langsP: "Le Pantanal accueille des visiteurs du monde entier. L'assistance en plusieurs langues rend l'expérience plus confortable et personnelle.",
     expTitle: 'Expériences au Pantanal',
@@ -535,6 +544,7 @@ const translations = {
     albumBtn: 'Ouvrir l\'album complet',
     reserveTitle: 'Réservez votre expérience',
     contactTitle: 'Contact',
+    menu_about: 'À propos',
     menu_experiences: 'Expériences',
     menu_gallery: 'Galerie',
     menu_album: 'Album',
@@ -553,6 +563,7 @@ function applyLanguage(lang) {
   document.getElementById('about-title').innerText = t.aboutTitle;
   document.getElementById('about-p1').innerText = t.aboutP1;
   document.getElementById('about-p2').innerText = t.aboutP2;
+  document.getElementById('about-link').innerText = t.aboutBtn;
   document.getElementById('langs-title').innerText = t.langsTitle;
   document.getElementById('langs-p').innerText = t.langsP;
   document.getElementById('exp-title').innerText = t.expTitle;
@@ -563,7 +574,7 @@ function applyLanguage(lang) {
   document.getElementById('reserve-title').innerText = t.reserveTitle;
   document.getElementById('contact-title').innerText = t.contactTitle;
   // menu
-  const menuKeys = ['menu_experiences','menu_gallery','menu_album','menu_contact','menu_reserve'];
+  const menuKeys = ['menu_about','menu_experiences','menu_gallery','menu_album','menu_contact','menu_reserve'];
   menuKeys.forEach(k => {
     const el = document.querySelector('[data-key="'+k+'"]');
     if (el) el.innerText = t[k];
