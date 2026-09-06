@@ -94,7 +94,6 @@ h1 { font-size:52px; margin:10px 0; font-weight:800; }
 /* BUTTONS - visible in hero for CTA, but main navigation contains links */
 .btn { display:inline-block; padding:14px 24px; margin:8px; background:#f4c542; color:black; font-weight:700; border-radius:8px; text-decoration:none; transition:.3s; }
 .btn:hover { transform:translateY(-3px); background:#ffd85e; }
-.hero-about-row { display:block; }
 
 /* SECTIONS */
 section { padding:70px 20px; max-width:1100px; margin:auto; }
@@ -147,8 +146,46 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
   .top-header .header-logo { height:72px; }
 }
 @media(max-width:800px) {
-  h1 { font-size:38px; }
-  .hero { height:50vh; }
+  .top-header {
+    width:100%;
+    min-height:58px;
+    padding:8px 12px;
+    gap:0;
+  }
+  .top-header > .header-logo { display:none; }
+  .site-nav {
+    width:100%;
+    min-width:0;
+    justify-content:space-between;
+    gap:8px;
+  }
+  .nav-left,
+  .nav-right { gap:6px; min-width:0; }
+  .language-switch { gap:4px; }
+  .lang-btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    min-width:42px;
+    height:40px;
+    padding:0;
+  }
+  h1 { display:none; }
+  .hero {
+    height:auto;
+    min-height:520px;
+    padding:38px 16px 44px;
+  }
+  .hero-logo-small {
+    display:block;
+    width:min(240px,74vw);
+    max-width:none;
+    max-height:160px;
+    margin:0 auto 18px;
+    object-fit:contain;
+    border-radius:7px;
+  }
   .guide { grid-template-columns:1fr; }
   .guide-text h2 { text-align:center; }
   .guide-photo { height:350px; }
@@ -180,8 +217,6 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
   .contact-dropdown.open:hover .dropdown { display:block; }
   .mobile-menu-btn { display:block; }
   .hero-content { padding-top:10px; }
-  .top-header { padding:10px; gap:10px; }
-  .top-header .header-logo { height:64px; max-width:60%; }
 }
 
 /* DESKTOP HEADER — compact, balanced and independent from mobile */
@@ -377,7 +412,6 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
 
     <a class="btn" id="cta-reserve" href="https://wa.me/5565998105952" target="_blank">Reserve Experience</a>
     <a class="btn" id="cta-explore" href="#passeios">Explore the Pantanal</a>
-    <span class="hero-about-row"><a class="btn about-page-link" id="cta-about" href="sobre.html">About Us</a></span>
   </div>
 </div>
 
@@ -392,7 +426,7 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
       <p id="about-p1">Discover the Pantanal accompanied by someone who knows the region and lives its nature closely.</p>
       <p id="about-p2">The experience goes far beyond simply visiting a place. It's observing the animals, navigating the rivers, getting to know the landscapes, and discovering true Pantanal life.</p>
       <p id="about-p3"><strong>Service for Brazilian and international visitors.</strong></p>
-      <a class="btn" id="about-link" href="sobre.html">Read our story</a>
+      <a class="btn about-page-link" id="about-link" href="sobre.html">Read our story</a>
     </div>
   </div>
 </section>
@@ -500,7 +534,6 @@ const translations = {
     siteSubtitle: 'Guide in the Pantanal • Nature • Wildlife • Authentic experiences',
     ctaReserve: 'Reserve Experience',
     ctaExplore: 'Explore the Pantanal',
-    ctaAbout: 'About Us',
     aboutTitle: 'Meet Jhimy',
     aboutP1: 'Discover the Pantanal accompanied by someone who knows the region and lives its nature closely.',
     aboutP2: "The experience goes far beyond simply visiting a place. It's observing the animals, navigating the rivers, getting to know the landscapes, and discovering true Pantanal life.",
@@ -525,7 +558,6 @@ const translations = {
     siteSubtitle: 'Guia no Pantanal • Natureza • Vida Selvagem • Experiências autênticas',
     ctaReserve: 'Reservar Experiência',
     ctaExplore: 'Conhecer o Pantanal',
-    ctaAbout: 'Sobre Nós',
     aboutTitle: 'Conheça Jhimy',
     aboutP1: 'Conheça o Pantanal acompanhado por quem conhece a região e vive de perto a sua natureza.',
     aboutP2: 'A experiência vai muito além de simplesmente visitar um lugar. É observar os animais, navegar pelos rios, conhecer as paisagens e descobrir a verdadeira vida pantaneira.',
@@ -550,7 +582,6 @@ const translations = {
     siteSubtitle: 'Guía en el Pantanal • Naturaleza • Vida Silvestre • Experiencias auténticas',
     ctaReserve: 'Reservar Experiencia',
     ctaExplore: 'Conocer el Pantanal',
-    ctaAbout: 'Sobre nosotros',
     aboutTitle: 'Conoce a Jhimy',
     aboutP1: 'Descubre el Pantanal acompañado por alguien que conoce la región y vive de cerca su naturaleza.',
     aboutP2: 'La experiencia va mucho más allá de simplemente visitar un lugar. Es observar los animales, navegar por los ríos, conocer los paisajes y descubrir la verdadera vida pantanosa.',
@@ -575,7 +606,6 @@ const translations = {
     siteSubtitle: 'Guide au Pantanal • Nature • Faune • Expériences authentiques',
     ctaReserve: 'Réserver une expérience',
     ctaExplore: 'Découvrir le Pantanal',
-    ctaAbout: 'À propos',
     aboutTitle: 'Rencontrez Jhimy',
     aboutP1: "Découvrez le Pantanal accompagné de quelqu'un qui connaît la région et vit sa nature au quotidien.",
     aboutP2: "L'expérience va bien au-delà de la simple visite d'un lieu. C'est observer les animaux, naviguer sur les rivières, connaître les paysages et découvrir la vraie vie du Pantanal.",
@@ -604,7 +634,6 @@ function applyLanguage(lang) {
   document.getElementById('site-subtitle').innerText = t.siteSubtitle;
   document.getElementById('cta-reserve').innerText = t.ctaReserve;
   document.getElementById('cta-explore').innerText = t.ctaExplore;
-  document.getElementById('cta-about').innerText = t.ctaAbout;
   document.getElementById('about-title').innerText = t.aboutTitle;
   document.getElementById('about-p1').innerText = t.aboutP1;
   document.getElementById('about-p2').innerText = t.aboutP2;
