@@ -175,16 +175,22 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
   .hero {
     height:auto;
     min-height:520px;
-    padding:38px 16px 44px;
+    padding:145px 16px 44px;
+    background-position:center center;
   }
+  .hero-content { position:static; }
   .hero-logo-small {
     display:block;
     width:min(240px,74vw);
     max-width:none;
-    max-height:160px;
-    margin:0 auto 18px;
+    max-height:130px;
+    margin:0;
     object-fit:contain;
     border-radius:7px;
+    position:absolute;
+    top:6px;
+    left:50%;
+    transform:translateX(-50%);
   }
   .guide { grid-template-columns:1fr; }
   .guide-text h2 { text-align:center; }
