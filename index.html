@@ -43,7 +43,7 @@ body { margin:0; font-family:Montserrat,sans-serif; background:#0b1f14; color:wh
   z-index:4;
 }
 .nav-left { display:flex; align-items:center; gap:12px; }
-.nav-right { display:flex; align-items:center; gap:12px; }
+.nav-right { display:flex; align-items:center; gap:12px; position:relative; }
 .nav-menu { list-style:none; margin:0; padding:0; display:flex; gap:12px; }
 .nav-menu a { color:white; text-decoration:none; background:#123524; padding:8px 12px; border-radius:8px; font-weight:700; }
 .nav-menu a:hover { background:#16452f; }
@@ -56,6 +56,19 @@ body { margin:0; font-family:Montserrat,sans-serif; background:#0b1f14; color:wh
 .language-switch { display:flex; gap:8px; }
 .lang-btn { background:#123524; padding:8px 10px; border-radius:8px; cursor:pointer; font-weight:700; }
 .lang-btn:hover { background:#16452f; }
+.mobile-menu-btn {
+  display:none;
+  width:auto;
+  min-width:48px;
+  padding:10px 13px;
+  color:white;
+  background:#123524;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:8px;
+  font-family:Montserrat,sans-serif;
+  font-size:15px;
+  font-weight:700;
+}
 
 /* HERO */
 .hero {
@@ -81,6 +94,7 @@ h1 { font-size:52px; margin:10px 0; font-weight:800; }
 /* BUTTONS - visible in hero for CTA, but main navigation contains links */
 .btn { display:inline-block; padding:14px 24px; margin:8px; background:#f4c542; color:black; font-weight:700; border-radius:8px; text-decoration:none; transition:.3s; }
 .btn:hover { transform:translateY(-3px); background:#ffd85e; }
+.hero-about-row { display:block; }
 
 /* SECTIONS */
 section { padding:70px 20px; max-width:1100px; margin:auto; }
@@ -139,7 +153,32 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
   .guide-text h2 { text-align:center; }
   .guide-photo { height:350px; }
   .nav-menu { display:none; }
-  .mobile-menu-btn { display:block; background:#123524; padding:8px 10px; border-radius:8px; }
+  .nav-menu.open {
+    display:flex;
+    position:absolute;
+    top:50px;
+    right:0;
+    width:min(290px,calc(100vw - 20px));
+    padding:10px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:7px;
+    background:#0f2c1d;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:12px;
+    box-shadow:0 14px 36px rgba(0,0,0,.38);
+  }
+  .nav-menu.open li,
+  .nav-menu.open a { width:100%; }
+  .contact-dropdown .dropdown {
+    position:static;
+    margin-top:7px;
+    min-width:0;
+  }
+  .contact-dropdown.open .dropdown { display:block; }
+  .contact-dropdown:hover .dropdown { display:none; }
+  .contact-dropdown.open:hover .dropdown { display:block; }
+  .mobile-menu-btn { display:block; }
   .hero-content { padding-top:10px; }
   .top-header { padding:10px; gap:10px; }
   .top-header .header-logo { height:64px; max-width:60%; }
@@ -306,8 +345,8 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
       </div>
     </div>
     <div class="nav-right">
-      <ul class="nav-menu">
-        <li><a href="sobre.html" data-key="menu_about">About Us</a></li>
+      <ul class="nav-menu" id="main-menu">
+        <li><a href="sobre.html" class="about-page-link" data-key="menu_about">About Us</a></li>
         <li><a href="#passeios" data-key="menu_experiences">Experiences</a></li>
         <li><a href="#galeria" data-key="menu_gallery">Gallery</a></li>
         <li><a href="#album" id="menu-album" data-key="menu_album">Album</a></li>
@@ -321,7 +360,7 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
         </li>
         <li><a class="btn nav-reserve" href="https://wa.me/5565998105952" target="_blank" data-key="menu_reserve">Reserve</a></li>
       </ul>
-      <button class="mobile-menu-btn" style="display:none;">Menu</button>
+      <button class="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
     </div>
   </nav>
 </header>
@@ -338,6 +377,7 @@ footer { background:#050805; text-align:center; padding:25px; font-size:14px; co
 
     <a class="btn" id="cta-reserve" href="https://wa.me/5565998105952" target="_blank">Reserve Experience</a>
     <a class="btn" id="cta-explore" href="#passeios">Explore the Pantanal</a>
+    <span class="hero-about-row"><a class="btn about-page-link" id="cta-about" href="sobre.html">About Us</a></span>
   </div>
 </div>
 
@@ -460,6 +500,7 @@ const translations = {
     siteSubtitle: 'Guide in the Pantanal • Nature • Wildlife • Authentic experiences',
     ctaReserve: 'Reserve Experience',
     ctaExplore: 'Explore the Pantanal',
+    ctaAbout: 'About Us',
     aboutTitle: 'Meet Jhimy',
     aboutP1: 'Discover the Pantanal accompanied by someone who knows the region and lives its nature closely.',
     aboutP2: "The experience goes far beyond simply visiting a place. It's observing the animals, navigating the rivers, getting to know the landscapes, and discovering true Pantanal life.",
@@ -484,6 +525,7 @@ const translations = {
     siteSubtitle: 'Guia no Pantanal • Natureza • Vida Selvagem • Experiências autênticas',
     ctaReserve: 'Reservar Experiência',
     ctaExplore: 'Conhecer o Pantanal',
+    ctaAbout: 'Sobre Nós',
     aboutTitle: 'Conheça Jhimy',
     aboutP1: 'Conheça o Pantanal acompanhado por quem conhece a região e vive de perto a sua natureza.',
     aboutP2: 'A experiência vai muito além de simplesmente visitar um lugar. É observar os animais, navegar pelos rios, conhecer as paisagens e descobrir a verdadeira vida pantaneira.',
@@ -508,6 +550,7 @@ const translations = {
     siteSubtitle: 'Guía en el Pantanal • Naturaleza • Vida Silvestre • Experiencias auténticas',
     ctaReserve: 'Reservar Experiencia',
     ctaExplore: 'Conocer el Pantanal',
+    ctaAbout: 'Sobre nosotros',
     aboutTitle: 'Conoce a Jhimy',
     aboutP1: 'Descubre el Pantanal acompañado por alguien que conoce la región y vive de cerca su naturaleza.',
     aboutP2: 'La experiencia va mucho más allá de simplemente visitar un lugar. Es observar los animales, navegar por los ríos, conocer los paisajes y descubrir la verdadera vida pantanosa.',
@@ -532,6 +575,7 @@ const translations = {
     siteSubtitle: 'Guide au Pantanal • Nature • Faune • Expériences authentiques',
     ctaReserve: 'Réserver une expérience',
     ctaExplore: 'Découvrir le Pantanal',
+    ctaAbout: 'À propos',
     aboutTitle: 'Rencontrez Jhimy',
     aboutP1: "Découvrez le Pantanal accompagné de quelqu'un qui connaît la région et vit sa nature au quotidien.",
     aboutP2: "L'expérience va bien au-delà de la simple visite d'un lieu. C'est observer les animaux, naviguer sur les rivières, connaître les paysages et découvrir la vraie vie du Pantanal.",
@@ -560,6 +604,7 @@ function applyLanguage(lang) {
   document.getElementById('site-subtitle').innerText = t.siteSubtitle;
   document.getElementById('cta-reserve').innerText = t.ctaReserve;
   document.getElementById('cta-explore').innerText = t.ctaExplore;
+  document.getElementById('cta-about').innerText = t.ctaAbout;
   document.getElementById('about-title').innerText = t.aboutTitle;
   document.getElementById('about-p1').innerText = t.aboutP1;
   document.getElementById('about-p2').innerText = t.aboutP2;
@@ -579,12 +624,16 @@ function applyLanguage(lang) {
     const el = document.querySelector('[data-key="'+k+'"]');
     if (el) el.innerText = t[k];
   });
+  document.querySelectorAll('.about-page-link').forEach(link => {
+    link.href = 'sobre.html?lang=' + encodeURIComponent(lang);
+  });
+  localStorage.setItem('jhimyLanguage', lang);
 }
 
 // detect language from ?lang= or navigator
 (function(){
   const params = new URLSearchParams(location.search);
-  let lang = params.get('lang');
+  let lang = params.get('lang') || localStorage.getItem('jhimyLanguage');
   if (!lang) {
     const nav = navigator.language || navigator.userLanguage || 'en';
     if (nav.startsWith('pt')) lang = 'pt';
@@ -607,6 +656,36 @@ document.querySelectorAll('.lang-btn').forEach(b => {
   });
 });
 
+// mobile menu
+const mobileMenuButton = document.querySelector('.mobile-menu-btn');
+const mainMenu = document.getElementById('main-menu');
+const contactDropdown = document.querySelector('.contact-dropdown');
+mobileMenuButton.addEventListener('click', () => {
+  const open = mainMenu.classList.toggle('open');
+  mobileMenuButton.setAttribute('aria-expanded', String(open));
+});
+contactDropdown.querySelector(':scope > a').addEventListener('click', event => {
+  if (window.innerWidth <= 800) {
+    event.preventDefault();
+    contactDropdown.classList.toggle('open');
+  }
+});
+mainMenu.querySelectorAll('a').forEach(link => {
+  if (link === contactDropdown.querySelector(':scope > a')) return;
+  link.addEventListener('click', () => {
+    mainMenu.classList.remove('open');
+    contactDropdown.classList.remove('open');
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+  });
+});
+document.addEventListener('click', event => {
+  if (!event.target.closest('.site-nav')) {
+    mainMenu.classList.remove('open');
+    contactDropdown.classList.remove('open');
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+  }
+});
+
 // form WhatsApp sender (keeps same number)
 function enviarWhatsApp() {
   const nome = document.getElementById("nome").value;
@@ -623,4 +702,3 @@ function enviarWhatsApp() {
 
 </body>
 </html>
-

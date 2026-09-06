@@ -23,25 +23,25 @@ footer{padding:28px 20px;text-align:center;color:#aeb5b0;background:#050805;font
 </head>
 <body>
 <header class="top-header">
-  <a href="index.html" aria-label="Voltar à página inicial"><img src="foto2.jpg" alt="Jhimy Petit Noel" class="header-logo"></a>
+  <a href="index.html" class="home-page-link" aria-label="Voltar à página inicial"><img src="foto2.jpg" alt="Jhimy Petit Noel" class="header-logo"></a>
   <nav class="site-nav" aria-label="Navegação principal">
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-menu" data-i18n="menuButton">Menu</button>
     <ul class="nav-menu" id="nav-menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="sobre.html" aria-current="page">Sobre Nós</a></li>
-      <li><a href="index.html#passeios">Experiências</a></li>
-      <li><a href="index.html#galeria">Galeria</a></li>
-      <li><a href="index.html#album">Álbum</a></li>
-      <li><a class="nav-reserve" href="https://wa.me/5565998105952" target="_blank" rel="noopener">Reservar</a></li>
+      <li><a href="index.html" class="home-page-link" data-i18n="navHome">Início</a></li>
+      <li><a href="sobre.html" class="about-page-link" aria-current="page" data-i18n="navAbout">Sobre Nós</a></li>
+      <li><a href="index.html#passeios" data-home-section="passeios" data-i18n="navExperiences">Experiências</a></li>
+      <li><a href="index.html#galeria" data-home-section="galeria" data-i18n="navGallery">Galeria</a></li>
+      <li><a href="index.html#album" data-home-section="album" data-i18n="navAlbum">Álbum</a></li>
+      <li><a class="nav-reserve" href="https://wa.me/5565998105952" target="_blank" rel="noopener" data-i18n="navReserve">Reservar</a></li>
     </ul>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-    <p class="eyebrow">Sobre nós</p>
+    <p class="eyebrow" data-i18n="eyebrow">Sobre nós</p>
     <h1>Jhimy Petit Noel</h1>
-    <p>Guia de Turismo Regional, Nacional e América do Sul • Naturalista • Experiências em turismo de campo no Pantanal, Chapada dos Guimarães e Nobres.</p>
+    <p data-i18n="heroSubtitle">Guia de Turismo Regional, Nacional e América do Sul • Naturalista • Experiências em turismo de campo no Pantanal, Chapada dos Guimarães e Nobres.</p>
   </div>
 </section>
 
@@ -50,12 +50,12 @@ footer{padding:28px 20px;text-align:center;color:#aeb5b0;background:#050805;font
     <div class="intro-grid">
       <img src="foto3.jpg" alt="Jhimy Petit Noel no Pantanal" class="portrait">
       <div>
-        <h2>Naturalista e guia profissional</h2>
-        <p class="lead">Jhimy Petit Noel é naturalista e guia profissional de turismo de natureza, com atuação no Mato Grosso desde 2014.</p>
-        <p>Sua experiência é voltada à apresentação da fauna e da flora do Pantanal, de sua biodiversidade, cultura e paisagens.</p>
-        <p>Com registro profissional de guia de turismo no Cadastur nº 11116330969, Jhimy possui atuação cadastrada em Cuiabá, Poconé e Chapada dos Guimarães, nos segmentos de ecoturismo, turismo de aventura e turismo cultural.</p>
-        <p>Seu cadastro também registra atendimento em português, francês, inglês e espanhol — característica especialmente importante para receber visitantes brasileiros e estrangeiros.</p>
-        <p class="source-note">Referência profissional: Turismo do Brasil / Cadastur.</p>
+        <h2 data-i18n="professionalTitle">Naturalista e guia profissional</h2>
+        <p class="lead" data-i18n="professionalP1">Jhimy Petit Noel é naturalista e guia profissional de turismo de natureza, com atuação no Mato Grosso desde 2014.</p>
+        <p data-i18n="professionalP2">Sua experiência é voltada à apresentação da fauna e da flora do Pantanal, de sua biodiversidade, cultura e paisagens.</p>
+        <p data-i18n="professionalP3">Com registro profissional de guia de turismo no Cadastur nº 11116330969, Jhimy possui atuação cadastrada em Cuiabá, Poconé e Chapada dos Guimarães, nos segmentos de ecoturismo, turismo de aventura e turismo cultural.</p>
+        <p data-i18n="professionalP4">Seu cadastro também registra atendimento em português, francês, inglês e espanhol — característica especialmente importante para receber visitantes brasileiros e estrangeiros.</p>
+        <p class="source-note" data-i18n="professionalSource">Referência profissional: Turismo do Brasil / Cadastur.</p>
       </div>
     </div>
   </section>
@@ -63,61 +63,211 @@ footer{padding:28px 20px;text-align:center;color:#aeb5b0;background:#050805;font
   <section class="section">
     <div class="two-columns">
       <article class="panel">
-        <h2>Um guia entre duas culturas</h2>
-        <p>Nascido no Haiti e estabelecido no Brasil, Jhimy construiu sua trajetória profissional no contato direto com a natureza e com o turismo brasileiro.</p>
-        <p>Sua história representa um encontro de culturas: a experiência de suas origens haitianas somada à vivência brasileira e ao conhecimento adquirido no Mato Grosso.</p>
-        <p class="highlight">Para Jhimy, apresentar o Pantanal não significa apenas mostrar animais e paisagens. Significa ajudar cada visitante a compreender e respeitar um dos maiores patrimônios naturais do planeta.</p>
+        <h2 data-i18n="culturesTitle">Um guia entre duas culturas</h2>
+        <p data-i18n="culturesP1">Nascido no Haiti e estabelecido no Brasil, Jhimy construiu sua trajetória profissional no contato direto com a natureza e com o turismo brasileiro.</p>
+        <p data-i18n="culturesP2">Sua história representa um encontro de culturas: a experiência de suas origens haitianas somada à vivência brasileira e ao conhecimento adquirido no Mato Grosso.</p>
+        <p class="highlight" data-i18n="culturesHighlight">Para Jhimy, apresentar o Pantanal não significa apenas mostrar animais e paisagens. Significa ajudar cada visitante a compreender e respeitar um dos maiores patrimônios naturais do planeta.</p>
       </article>
       <article class="panel">
-        <h2>Experiência internacional</h2>
-        <p>O atendimento multilíngue permite que Jhimy receba visitantes de diferentes países e facilite a comunicação durante as experiências no Pantanal.</p>
-        <p>Seu nome aparece também em referências públicas relacionadas ao turismo internacional, incluindo uma publicação em francês sobre viagens ao Pantanal que o indica como guia francófono na região.</p>
-        <p class="source-note">Referência internacional: Routard.com.</p>
+        <h2 data-i18n="internationalTitle">Experiência internacional</h2>
+        <p data-i18n="internationalP1">O atendimento multilíngue permite que Jhimy receba visitantes de diferentes países e facilite a comunicação durante as experiências no Pantanal.</p>
+        <p data-i18n="internationalP2">Seu nome aparece também em referências públicas relacionadas ao turismo internacional, incluindo uma publicação em francês sobre viagens ao Pantanal que o indica como guia francófono na região.</p>
+        <p class="source-note" data-i18n="internationalSource">Referência internacional: Routard.com.</p>
       </article>
     </div>
   </section>
 
   <section class="section">
-    <h2>Pantanal: sua grande paixão</h2>
-    <p class="lead">O trabalho de Jhimy está ligado especialmente às experiências de observação da fauna e da natureza.</p>
-    <p>Durante os passeios, o objetivo é proporcionar ao visitante uma experiência autêntica, segura e responsável, valorizando a biodiversidade pantaneira e o conhecimento local e regional.</p>
+    <h2 data-i18n="passionTitle">Pantanal: sua grande paixão</h2>
+    <p class="lead" data-i18n="passionP1">O trabalho de Jhimy está ligado especialmente às experiências de observação da fauna e da natureza.</p>
+    <p data-i18n="passionP2">Durante os passeios, o objetivo é proporcionar ao visitante uma experiência autêntica, segura e responsável, valorizando a biodiversidade pantaneira e o conhecimento local e regional.</p>
     <ul class="interests">
-      <li>🐆 Observação de onça-pintada</li><li>🐊 Jacarés e répteis</li><li>🐦 Observação de aves</li>
-      <li>🐾 Mamíferos do Pantanal</li><li>🌿 Flora e paisagens pantaneiras</li><li>🌅 Safáris e experiências de natureza</li>
-      <li>🚤 Passeios e exploração de ambientes naturais</li><li>📷 Fotografia de vida selvagem</li><li>🌎 Ecoturismo e turismo responsável</li>
+      <li data-i18n="interest1">🐆 Observação de onça-pintada</li><li data-i18n="interest2">🐊 Jacarés e répteis</li><li data-i18n="interest3">🐦 Observação de aves</li>
+      <li data-i18n="interest4">🐾 Mamíferos do Pantanal</li><li data-i18n="interest5">🌿 Flora e paisagens pantaneiras</li><li data-i18n="interest6">🌅 Safáris e experiências de natureza</li>
+      <li data-i18n="interest7">🚤 Passeios e exploração de ambientes naturais</li><li data-i18n="interest8">📷 Fotografia de vida selvagem</li><li data-i18n="interest9">🌎 Ecoturismo e turismo responsável</li>
     </ul>
   </section>
 
   <section class="section">
     <article class="company">
-      <p class="eyebrow">Empresa</p>
+      <p class="eyebrow" data-i18n="companyEyebrow">Empresa</p>
       <h2>Pantanal Tour Express</h2>
-      <p>A Pantanal Tour Express é uma agência especializada em proporcionar aos visitantes contato com a natureza, a fauna e a cultura pantaneira. Oferece experiências voltadas principalmente à observação de onças-pintadas, aves, mamíferos e répteis, além de safáris fotográficos e exploração da biodiversidade do Pantanal.</p>
-      <p>A empresa está publicamente associada ao profissional Jhimy Petit Noel. Desde 2019, ele construiu sua própria empresa e presta serviços para outras agências e pousadas, como Pantanal Explorer, Araras Eco Lodge, Pousada Rio Claro, Pantanal Norte e outras.</p>
-      <p>O cadastro municipal do Portal de Turismo de Cuiabá lista Jhimy Petit Noel como guia de turismo, com telefone comercial (65) 99810-5952 e e-mail profissional jhimo2017@icloud.com.</p>
+      <p data-i18n="companyP1">A Pantanal Tour Express é uma agência especializada em proporcionar aos visitantes contato com a natureza, a fauna e a cultura pantaneira. Oferece experiências voltadas principalmente à observação de onças-pintadas, aves, mamíferos e répteis, além de safáris fotográficos e exploração da biodiversidade do Pantanal.</p>
+      <p data-i18n="companyP2">A empresa está publicamente associada ao profissional Jhimy Petit Noel. Desde 2019, ele construiu sua própria empresa e presta serviços para outras agências e pousadas, como Pantanal Explorer, Araras Eco Lodge, Pousada Rio Claro, Pantanal Norte e outras.</p>
+      <p data-i18n="companyP3">O cadastro municipal do Portal de Turismo de Cuiabá lista Jhimy Petit Noel como guia de turismo, com telefone comercial (65) 99810-5952 e e-mail profissional jhimo2017@icloud.com.</p>
       <ul class="facts">
-        <li><strong>Registro de guia:</strong> 11116330969</li><li><strong>UF:</strong> Mato Grosso</li>
-        <li><strong>Áreas de atuação:</strong> Cuiabá, Poconé e Chapada dos Guimarães</li>
-        <li><strong>Segmentos:</strong> ecoturismo, turismo de aventura e turismo cultural</li>
-        <li><strong>Idiomas:</strong> português, francês, inglês e espanhol</li>
-        <li><strong>Website:</strong> pantanaltourexpress.com.br</li>
+        <li data-i18n="factRegistration"><strong>Registro de guia:</strong> 11116330969</li><li data-i18n="factState"><strong>UF:</strong> Mato Grosso</li>
+        <li data-i18n="factAreas"><strong>Áreas de atuação:</strong> Cuiabá, Poconé e Chapada dos Guimarães</li>
+        <li data-i18n="factSegments"><strong>Segmentos:</strong> ecoturismo, turismo de aventura e turismo cultural</li>
+        <li data-i18n="factLanguages"><strong>Idiomas:</strong> português, francês, inglês e espanhol</li>
+        <li data-i18n="factWebsite"><strong>Website:</strong> pantanaltourexpress.com.br</li>
       </ul>
       <div class="legal">
         <h3>Jhimy Petit Noel — CNPJ 34.275.556/0001-02</h3>
-        <p>Empresa ativa desde 2019, com atuação como operadora turística — CNAE 79.12-1 — agência de viagens, serviços de reservas e outros serviços de turismo.</p>
+        <p data-i18n="legalP">Empresa ativa desde 2019, com atuação como operadora turística — CNAE 79.12-1 — agência de viagens, serviços de reservas e outros serviços de turismo.</p>
       </div>
-      <p class="highlight">Uma proposta preparada para atender turistas do Brasil e do mundo, com atendimento em português, inglês e francês.</p>
+      <p class="highlight" data-i18n="companyHighlight">Uma proposta preparada para atender turistas do Brasil e do mundo, com atendimento em português, inglês e francês.</p>
       <div class="actions">
-        <a class="btn" href="https://wa.me/5565998105952" target="_blank" rel="noopener">Falar com Jhimy</a>
-        <a class="btn btn-secondary" href="index.html">Voltar ao início</a>
+        <a class="btn" href="https://wa.me/5565998105952" target="_blank" rel="noopener" data-i18n="contactBtn">Falar com Jhimy</a>
+        <a class="btn btn-secondary home-page-link" href="index.html" data-i18n="backBtn">Voltar ao início</a>
       </div>
     </article>
   </section>
 </main>
 
-<footer>© 2026 Jhimy Petit Noel • Pantanal Tour Express</footer>
+<footer data-i18n="footer">© 2026 Jhimy Petit Noel • Pantanal Tour Express</footer>
 <a class="whatsapp" href="https://wa.me/5565998105952" target="_blank" rel="noopener" aria-label="Falar com Jhimy pelo WhatsApp">WhatsApp</a>
 <script>
+const translations = {
+  pt: {
+    menuButton:`Menu`,navHome:`Início`,navAbout:`Sobre Nós`,navExperiences:`Experiências`,navGallery:`Galeria`,navAlbum:`Álbum`,navReserve:`Reservar`,
+    eyebrow:`Sobre nós`,
+    heroSubtitle:`Guia de Turismo Regional, Nacional e América do Sul • Naturalista • Experiências em turismo de campo no Pantanal, Chapada dos Guimarães e Nobres.`,
+    professionalTitle:`Naturalista e guia profissional`,
+    professionalP1:`Jhimy Petit Noel é naturalista e guia profissional de turismo de natureza, com atuação no Mato Grosso desde 2014.`,
+    professionalP2:`Sua experiência é voltada à apresentação da fauna e da flora do Pantanal, de sua biodiversidade, cultura e paisagens.`,
+    professionalP3:`Com registro profissional de guia de turismo no Cadastur nº 11116330969, Jhimy possui atuação cadastrada em Cuiabá, Poconé e Chapada dos Guimarães, nos segmentos de ecoturismo, turismo de aventura e turismo cultural.`,
+    professionalP4:`Seu cadastro também registra atendimento em português, francês, inglês e espanhol — característica especialmente importante para receber visitantes brasileiros e estrangeiros.`,
+    professionalSource:`Referência profissional: Turismo do Brasil / Cadastur.`,
+    culturesTitle:`Um guia entre duas culturas`,
+    culturesP1:`Nascido no Haiti e estabelecido no Brasil, Jhimy construiu sua trajetória profissional no contato direto com a natureza e com o turismo brasileiro.`,
+    culturesP2:`Sua história representa um encontro de culturas: a experiência de suas origens haitianas somada à vivência brasileira e ao conhecimento adquirido no Mato Grosso.`,
+    culturesHighlight:`Para Jhimy, apresentar o Pantanal não significa apenas mostrar animais e paisagens. Significa ajudar cada visitante a compreender e respeitar um dos maiores patrimônios naturais do planeta.`,
+    internationalTitle:`Experiência internacional`,
+    internationalP1:`O atendimento multilíngue permite que Jhimy receba visitantes de diferentes países e facilite a comunicação durante as experiências no Pantanal.`,
+    internationalP2:`Seu nome aparece também em referências públicas relacionadas ao turismo internacional, incluindo uma publicação em francês sobre viagens ao Pantanal que o indica como guia francófono na região.`,
+    internationalSource:`Referência internacional: Routard.com.`,
+    passionTitle:`Pantanal: sua grande paixão`,
+    passionP1:`O trabalho de Jhimy está ligado especialmente às experiências de observação da fauna e da natureza.`,
+    passionP2:`Durante os passeios, o objetivo é proporcionar ao visitante uma experiência autêntica, segura e responsável, valorizando a biodiversidade pantaneira e o conhecimento local e regional.`,
+    interest1:`🐆 Observação de onça-pintada`,interest2:`🐊 Jacarés e répteis`,interest3:`🐦 Observação de aves`,interest4:`🐾 Mamíferos do Pantanal`,interest5:`🌿 Flora e paisagens pantaneiras`,interest6:`🌅 Safáris e experiências de natureza`,interest7:`🚤 Passeios e exploração de ambientes naturais`,interest8:`📷 Fotografia de vida selvagem`,interest9:`🌎 Ecoturismo e turismo responsável`,
+    companyEyebrow:`Empresa`,
+    companyP1:`A Pantanal Tour Express é uma agência especializada em proporcionar aos visitantes contato com a natureza, a fauna e a cultura pantaneira. Oferece experiências voltadas principalmente à observação de onças-pintadas, aves, mamíferos e répteis, além de safáris fotográficos e exploração da biodiversidade do Pantanal.`,
+    companyP2:`A empresa está publicamente associada ao profissional Jhimy Petit Noel. Desde 2019, ele construiu sua própria empresa e presta serviços para outras agências e pousadas, como Pantanal Explorer, Araras Eco Lodge, Pousada Rio Claro, Pantanal Norte e outras.`,
+    companyP3:`O cadastro municipal do Portal de Turismo de Cuiabá lista Jhimy Petit Noel como guia de turismo, com telefone comercial (65) 99810-5952 e e-mail profissional jhimo2017@icloud.com.`,
+    factRegistration:`<strong>Registro de guia:</strong> 11116330969`,factState:`<strong>UF:</strong> Mato Grosso`,factAreas:`<strong>Áreas de atuação:</strong> Cuiabá, Poconé e Chapada dos Guimarães`,factSegments:`<strong>Segmentos:</strong> ecoturismo, turismo de aventura e turismo cultural`,factLanguages:`<strong>Idiomas:</strong> português, francês, inglês e espanhol`,factWebsite:`<strong>Website:</strong> pantanaltourexpress.com.br`,
+    legalP:`Empresa ativa desde 2019, com atuação como operadora turística — CNAE 79.12-1 — agência de viagens, serviços de reservas e outros serviços de turismo.`,
+    companyHighlight:`Uma proposta preparada para atender turistas do Brasil e do mundo, com atendimento em português, inglês e francês.`,
+    contactBtn:`Falar com Jhimy`,backBtn:`Voltar ao início`,footer:`© 2026 Jhimy Petit Noel • Pantanal Tour Express`
+  },
+  en: {
+    menuButton:`Menu`,navHome:`Home`,navAbout:`About Us`,navExperiences:`Experiences`,navGallery:`Gallery`,navAlbum:`Album`,navReserve:`Book`,
+    eyebrow:`About us`,
+    heroSubtitle:`Regional, National and South America Tour Guide • Naturalist • Field tourism experiences in the Pantanal, Chapada dos Guimarães and Nobres.`,
+    professionalTitle:`Naturalist and professional guide`,
+    professionalP1:`Jhimy Petit Noel is a naturalist and professional nature tourism guide who has worked in Mato Grosso since 2014.`,
+    professionalP2:`His experience focuses on presenting the Pantanal's fauna and flora, biodiversity, culture and landscapes.`,
+    professionalP3:`Registered as a professional tour guide with Cadastur under no. 11116330969, Jhimy is authorized to work in Cuiabá, Poconé and Chapada dos Guimarães in ecotourism, adventure tourism and cultural tourism.`,
+    professionalP4:`His registration also lists service in Portuguese, French, English and Spanish — especially important when welcoming Brazilian and international visitors.`,
+    professionalSource:`Professional reference: Turismo do Brasil / Cadastur.`,
+    culturesTitle:`A guide between two cultures`,
+    culturesP1:`Born in Haiti and established in Brazil, Jhimy built his professional path through direct contact with nature and Brazilian tourism.`,
+    culturesP2:`His story also represents a meeting of cultures: the experience of his Haitian origins combined with life in Brazil and the knowledge acquired in Mato Grosso.`,
+    culturesHighlight:`For Jhimy, presenting the Pantanal is not only about showing animals and landscapes. It means helping each visitor understand and respect one of the planet's greatest natural treasures.`,
+    internationalTitle:`International experience`,
+    internationalP1:`Multilingual service allows Jhimy to welcome visitors from different countries and make communication easier during their Pantanal experiences.`,
+    internationalP2:`His name also appears in public references related to international tourism, including a French publication about travel in the Pantanal that identifies Jhimy as a French-speaking guide in the region.`,
+    internationalSource:`International reference: Routard.com.`,
+    passionTitle:`The Pantanal: his great passion`,
+    passionP1:`Jhimy's work is especially connected to wildlife and nature observation experiences.`,
+    passionP2:`During each tour, the goal is to offer visitors an authentic, safe and responsible experience that values Pantanal biodiversity and local and regional knowledge.`,
+    interest1:`🐆 Jaguar watching`,interest2:`🐊 Caimans and reptiles`,interest3:`🐦 Birdwatching`,interest4:`🐾 Pantanal mammals`,interest5:`🌿 Pantanal flora and landscapes`,interest6:`🌅 Safaris and nature experiences`,interest7:`🚤 Tours and exploration of natural environments`,interest8:`📷 Wildlife photography`,interest9:`🌎 Ecotourism and responsible tourism`,
+    companyEyebrow:`Company`,
+    companyP1:`Pantanal Tour Express is an agency specializing in bringing visitors into contact with the Pantanal's nature, wildlife and culture. Its experiences focus mainly on observing jaguars, birds, mammals and reptiles, as well as photographic safaris and exploration of Pantanal biodiversity.`,
+    companyP2:`The company is publicly associated with professional guide Jhimy Petit Noel. Since 2019, he has built his own company and provided services to other agencies and lodges, including Pantanal Explorer, Araras Eco Lodge, Pousada Rio Claro, Pantanal Norte and others.`,
+    companyP3:`Cuiabá's Municipal Tourism Portal lists Jhimy Petit Noel as a tour guide, with business phone number +55 65 99810-5952 and professional email jhimo2017@icloud.com.`,
+    factRegistration:`<strong>Guide registration:</strong> 11116330969`,factState:`<strong>State:</strong> Mato Grosso`,factAreas:`<strong>Areas served:</strong> Cuiabá, Poconé and Chapada dos Guimarães`,factSegments:`<strong>Segments:</strong> ecotourism, adventure tourism and cultural tourism`,factLanguages:`<strong>Languages:</strong> Portuguese, French, English and Spanish`,factWebsite:`<strong>Website:</strong> pantanaltourexpress.com.br`,
+    legalP:`Active since 2019 as a tour operator — CNAE 79.12-1 — travel agency, booking services and other tourism services.`,
+    companyHighlight:`A service prepared to welcome travelers from Brazil and around the world in Portuguese, English and French.`,
+    contactBtn:`Talk to Jhimy`,backBtn:`Back to home`,footer:`© 2026 Jhimy Petit Noel • Pantanal Tour Express`
+  },
+  es: {
+    menuButton:`Menú`,navHome:`Inicio`,navAbout:`Sobre nosotros`,navExperiences:`Experiencias`,navGallery:`Galería`,navAlbum:`Álbum`,navReserve:`Reservar`,
+    eyebrow:`Sobre nosotros`,
+    heroSubtitle:`Guía de Turismo Regional, Nacional y de América del Sur • Naturalista • Experiencias de turismo de campo en el Pantanal, Chapada dos Guimarães y Nobres.`,
+    professionalTitle:`Naturalista y guía profesional`,
+    professionalP1:`Jhimy Petit Noel es naturalista y guía profesional de turismo de naturaleza, con actuación en Mato Grosso desde 2014.`,
+    professionalP2:`Su experiencia se centra en presentar la fauna y la flora del Pantanal, su biodiversidad, cultura y paisajes.`,
+    professionalP3:`Con registro profesional de guía de turismo en Cadastur nº 11116330969, Jhimy está registrado para actuar en Cuiabá, Poconé y Chapada dos Guimarães en los segmentos de ecoturismo, turismo de aventura y turismo cultural.`,
+    professionalP4:`Su registro también incluye atención en portugués, francés, inglés y español, algo especialmente importante para recibir visitantes brasileños y extranjeros.`,
+    professionalSource:`Referencia profesional: Turismo do Brasil / Cadastur.`,
+    culturesTitle:`Un guía entre dos culturas`,
+    culturesP1:`Nacido en Haití y establecido en Brasil, Jhimy construyó su trayectoria profesional en contacto directo con la naturaleza y con el turismo brasileño.`,
+    culturesP2:`Su historia representa también un encuentro de culturas: la experiencia de sus orígenes haitianos sumada a la vida en Brasil y al conocimiento adquirido en Mato Grosso.`,
+    culturesHighlight:`Para Jhimy, presentar el Pantanal no significa solamente mostrar animales y paisajes. Significa ayudar a cada visitante a comprender y respetar uno de los mayores patrimonios naturales del planeta.`,
+    internationalTitle:`Experiencia internacional`,
+    internationalP1:`La atención multilingüe permite que Jhimy reciba visitantes de diferentes países y facilite la comunicación durante las experiencias en el Pantanal.`,
+    internationalP2:`Su nombre también aparece en referencias públicas relacionadas con el turismo internacional, incluida una publicación francesa sobre viajes al Pantanal que presenta a Jhimy como guía francófono en la región.`,
+    internationalSource:`Referencia internacional: Routard.com.`,
+    passionTitle:`Pantanal: su gran pasión`,
+    passionP1:`El trabajo de Jhimy está especialmente relacionado con experiencias de observación de fauna y naturaleza.`,
+    passionP2:`Durante los paseos, el objetivo es brindar al visitante una experiencia auténtica, segura y responsable, valorando la biodiversidad del Pantanal y el conocimiento local y regional.`,
+    interest1:`🐆 Observación de jaguares`,interest2:`🐊 Caimanes y reptiles`,interest3:`🐦 Observación de aves`,interest4:`🐾 Mamíferos del Pantanal`,interest5:`🌿 Flora y paisajes del Pantanal`,interest6:`🌅 Safaris y experiencias en la naturaleza`,interest7:`🚤 Paseos y exploración de ambientes naturales`,interest8:`📷 Fotografía de vida silvestre`,interest9:`🌎 Ecoturismo y turismo responsable`,
+    companyEyebrow:`Empresa`,
+    companyP1:`Pantanal Tour Express es una agencia especializada en acercar a los visitantes a la naturaleza, la fauna y la cultura del Pantanal. Ofrece experiencias centradas principalmente en la observación de jaguares, aves, mamíferos y reptiles, además de safaris fotográficos y la exploración de la biodiversidad del Pantanal.`,
+    companyP2:`La empresa está públicamente asociada con el profesional Jhimy Petit Noel. Desde 2019, ha construido su propia empresa y presta servicios a otras agencias y posadas, como Pantanal Explorer, Araras Eco Lodge, Pousada Rio Claro, Pantanal Norte y otras.`,
+    companyP3:`El Portal Municipal de Turismo de Cuiabá registra a Jhimy Petit Noel como guía de turismo, con teléfono comercial +55 65 99810-5952 y correo profesional jhimo2017@icloud.com.`,
+    factRegistration:`<strong>Registro de guía:</strong> 11116330969`,factState:`<strong>Estado:</strong> Mato Grosso`,factAreas:`<strong>Áreas de actuación:</strong> Cuiabá, Poconé y Chapada dos Guimarães`,factSegments:`<strong>Segmentos:</strong> ecoturismo, turismo de aventura y turismo cultural`,factLanguages:`<strong>Idiomas:</strong> portugués, francés, inglés y español`,factWebsite:`<strong>Sitio web:</strong> pantanaltourexpress.com.br`,
+    legalP:`Empresa activa desde 2019 como operadora turística — CNAE 79.12-1 — agencia de viajes, servicios de reservas y otros servicios turísticos.`,
+    companyHighlight:`Una propuesta preparada para recibir turistas de Brasil y del mundo con atención en portugués, inglés y francés.`,
+    contactBtn:`Hablar con Jhimy`,backBtn:`Volver al inicio`,footer:`© 2026 Jhimy Petit Noel • Pantanal Tour Express`
+  },
+  fr: {
+    menuButton:`Menu`,navHome:`Accueil`,navAbout:`À propos`,navExperiences:`Expériences`,navGallery:`Galerie`,navAlbum:`Album`,navReserve:`Réserver`,
+    eyebrow:`À propos`,
+    heroSubtitle:`Guide touristique régional, national et en Amérique du Sud • Naturaliste • Expériences de tourisme de terrain dans le Pantanal, à Chapada dos Guimarães et à Nobres.`,
+    professionalTitle:`Naturaliste et guide professionnel`,
+    professionalP1:`Jhimy Petit Noel est naturaliste et guide professionnel spécialisé dans le tourisme de nature. Il exerce dans le Mato Grosso depuis 2014.`,
+    professionalP2:`Son expérience est consacrée à la découverte de la faune et de la flore du Pantanal, de sa biodiversité, de sa culture et de ses paysages.`,
+    professionalP3:`Titulaire de l'enregistrement professionnel de guide touristique Cadastur nº 11116330969, Jhimy est enregistré pour exercer à Cuiabá, Poconé et Chapada dos Guimarães dans les domaines de l'écotourisme, du tourisme d'aventure et du tourisme culturel.`,
+    professionalP4:`Son inscription mentionne également un accueil en portugais, français, anglais et espagnol — un atout particulièrement important pour recevoir les visiteurs brésiliens et étrangers.`,
+    professionalSource:`Référence professionnelle : Turismo do Brasil / Cadastur.`,
+    culturesTitle:`Un guide entre deux cultures`,
+    culturesP1:`Né en Haïti et établi au Brésil, Jhimy a construit son parcours professionnel au contact direct de la nature et du tourisme brésilien.`,
+    culturesP2:`Son histoire représente aussi une rencontre de cultures : l'expérience de ses origines haïtiennes, sa vie au Brésil et les connaissances acquises dans le Mato Grosso.`,
+    culturesHighlight:`Pour Jhimy, présenter le Pantanal ne consiste pas seulement à montrer des animaux et des paysages. Il s'agit d'aider chaque visiteur à comprendre et à respecter l'un des plus grands patrimoines naturels de la planète.`,
+    internationalTitle:`Expérience internationale`,
+    internationalP1:`L'accueil multilingue permet à Jhimy de recevoir des visiteurs de différents pays et de faciliter la communication pendant les expériences dans le Pantanal.`,
+    internationalP2:`Son nom apparaît également dans des références publiques liées au tourisme international, notamment dans une publication française consacrée aux voyages dans le Pantanal qui présente Jhimy comme guide francophone dans la région.`,
+    internationalSource:`Référence internationale : Routard.com.`,
+    passionTitle:`Le Pantanal : sa grande passion`,
+    passionP1:`Le travail de Jhimy est particulièrement lié aux expériences d'observation de la faune et de la nature.`,
+    passionP2:`Pendant les excursions, l'objectif est d'offrir aux visiteurs une expérience authentique, sûre et responsable, valorisant la biodiversité du Pantanal ainsi que les connaissances locales et régionales.`,
+    interest1:`🐆 Observation du jaguar`,interest2:`🐊 Caïmans et reptiles`,interest3:`🐦 Observation des oiseaux`,interest4:`🐾 Mammifères du Pantanal`,interest5:`🌿 Flore et paysages du Pantanal`,interest6:`🌅 Safaris et expériences dans la nature`,interest7:`🚤 Excursions et exploration des milieux naturels`,interest8:`📷 Photographie animalière`,interest9:`🌎 Écotourisme et tourisme responsable`,
+    companyEyebrow:`Entreprise`,
+    companyP1:`Pantanal Tour Express est une agence spécialisée dans la découverte de la nature, de la faune et de la culture du Pantanal. Elle propose principalement l'observation des jaguars, des oiseaux, des mammifères et des reptiles, ainsi que des safaris photographiques et l'exploration de la biodiversité du Pantanal.`,
+    companyP2:`L'entreprise est publiquement associée au guide professionnel Jhimy Petit Noel. Depuis 2019, il a développé sa propre entreprise et travaille pour d'autres agences et lodges, notamment Pantanal Explorer, Araras Eco Lodge, Pousada Rio Claro, Pantanal Norte et d'autres.`,
+    companyP3:`Le portail municipal du tourisme de Cuiabá répertorie Jhimy Petit Noel comme guide touristique, avec le numéro professionnel +55 65 99810-5952 et l'adresse électronique jhimo2017@icloud.com.`,
+    factRegistration:`<strong>Enregistrement de guide :</strong> 11116330969`,factState:`<strong>État :</strong> Mato Grosso`,factAreas:`<strong>Zones d'activité :</strong> Cuiabá, Poconé et Chapada dos Guimarães`,factSegments:`<strong>Domaines :</strong> écotourisme, tourisme d'aventure et tourisme culturel`,factLanguages:`<strong>Langues :</strong> portugais, français, anglais et espagnol`,factWebsite:`<strong>Site web :</strong> pantanaltourexpress.com.br`,
+    legalP:`Entreprise active depuis 2019 en tant qu'opérateur touristique — CNAE 79.12-1 — agence de voyages, services de réservation et autres services touristiques.`,
+    companyHighlight:`Une offre conçue pour accueillir les voyageurs du Brésil et du monde entier en portugais, anglais et français.`,
+    contactBtn:`Contacter Jhimy`,backBtn:`Retour à l'accueil`,footer:`© 2026 Jhimy Petit Noel • Pantanal Tour Express`
+  }
+};
+
+const params = new URLSearchParams(location.search);
+let selectedLanguage = params.get('lang') || localStorage.getItem('jhimyLanguage') || 'pt';
+if (!translations[selectedLanguage]) selectedLanguage = 'pt';
+const selected = translations[selectedLanguage];
+document.documentElement.lang = selectedLanguage === 'pt' ? 'pt-BR' : selectedLanguage;
+document.title = selectedLanguage === 'pt' ? 'Sobre Nós | Jhimy Petit Noel' :
+  selectedLanguage === 'en' ? 'About Us | Jhimy Petit Noel' :
+  selectedLanguage === 'es' ? 'Sobre nosotros | Jhimy Petit Noel' : 'À propos | Jhimy Petit Noel';
+document.querySelectorAll('[data-i18n]').forEach(element => {
+  const key = element.dataset.i18n;
+  if (selected[key] !== undefined) element.innerHTML = selected[key];
+});
+document.querySelectorAll('.home-page-link').forEach(link => {
+  link.href = 'index.html?lang=' + encodeURIComponent(selectedLanguage);
+});
+document.querySelectorAll('[data-home-section]').forEach(link => {
+  link.href = 'index.html?lang=' + encodeURIComponent(selectedLanguage) + '#' + link.dataset.homeSection;
+});
+document.querySelectorAll('.about-page-link').forEach(link => {
+  link.href = 'sobre.html?lang=' + encodeURIComponent(selectedLanguage);
+});
+localStorage.setItem('jhimyLanguage', selectedLanguage);
+
 const menuButton=document.querySelector('.menu-button');
 const navMenu=document.getElementById('nav-menu');
 menuButton.addEventListener('click',()=>{const open=navMenu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open))});
@@ -126,4 +276,3 @@ document.addEventListener('click',event=>{if(!event.target.closest('.site-nav'))
 </script>
 </body>
 </html>
-
